@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7780D1722994E16300DB17FB /* NetworkKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1712994E16300DB17FB /* NetworkKit.docc */; };
+		7780D1782994E16300DB17FB /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
+		7780D17F2994E16300DB17FB /* NetworkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D17E2994E16300DB17FB /* NetworkKitTests.swift */; };
+		7780D1802994E16300DB17FB /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7780D1702994E16300DB17FB /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7780D1832994E16300DB17FB /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
+		7780D1842994E16300DB17FB /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63229938F5400F81EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E63129938F5400F81EB2 /* ViewController.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
@@ -18,6 +24,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7780D1792994E16300DB17FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B8E62229938F5400F81EB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7780D16D2994E16300DB17FB;
+			remoteInfo = NetworkKit;
+		};
+		7780D17B2994E16300DB17FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B8E62229938F5400F81EB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77B8E62929938F5400F81EB2;
+			remoteInfo = GitHubRepo;
+		};
+		7780D1812994E16300DB17FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B8E62229938F5400F81EB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7780D16D2994E16300DB17FB;
+			remoteInfo = NetworkKit;
+		};
 		77B8E64129938F5500F81EB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77B8E62229938F5400F81EB2 /* Project object */;
@@ -34,7 +61,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7780D1852994E16300DB17FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7780D1842994E16300DB17FB /* NetworkKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7780D16E2994E16300DB17FB /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7780D1702994E16300DB17FB /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
+		7780D1712994E16300DB17FB /* NetworkKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkKit.docc; sourceTree = "<group>"; };
+		7780D1772994E16300DB17FB /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7780D17E2994E16300DB17FB /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
 		77B8E62A29938F5400F81EB2 /* GitHubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8E62D29938F5400F81EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B8E63129938F5400F81EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,10 +96,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7780D16B2994E16300DB17FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7780D1742994E16300DB17FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7780D1782994E16300DB17FB /* NetworkKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B8E62729938F5400F81EB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7780D1832994E16300DB17FB /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +136,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7780D16F2994E16300DB17FB /* NetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				7780D1702994E16300DB17FB /* NetworkKit.h */,
+				7780D1712994E16300DB17FB /* NetworkKit.docc */,
+			);
+			path = NetworkKit;
+			sourceTree = "<group>";
+		};
+		7780D17D2994E16300DB17FB /* NetworkKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7780D17E2994E16300DB17FB /* NetworkKitTests.swift */,
+			);
+			path = NetworkKitTests;
+			sourceTree = "<group>";
+		};
 		77B8E62129938F5400F81EB2 = {
 			isa = PBXGroup;
 			children = (
 				77B8E62C29938F5400F81EB2 /* GitHubRepo */,
 				77B8E64329938F5500F81EB2 /* GitHubRepoTests */,
 				77B8E64D29938F5500F81EB2 /* GitHubRepoUITests */,
+				7780D16F2994E16300DB17FB /* NetworkKit */,
+				7780D17D2994E16300DB17FB /* NetworkKitTests */,
 				77B8E62B29938F5400F81EB2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +171,8 @@
 				77B8E62A29938F5400F81EB2 /* GitHubRepo.app */,
 				77B8E64029938F5500F81EB2 /* GitHubRepoTests.xctest */,
 				77B8E64A29938F5500F81EB2 /* GitHubRepoUITests.xctest */,
+				7780D16E2994E16300DB17FB /* NetworkKit.framework */,
+				7780D1772994E16300DB17FB /* NetworkKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +209,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7780D1692994E16300DB17FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7780D1802994E16300DB17FB /* NetworkKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		7780D16D2994E16300DB17FB /* NetworkKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7780D18A2994E16300DB17FB /* Build configuration list for PBXNativeTarget "NetworkKit" */;
+			buildPhases = (
+				7780D1692994E16300DB17FB /* Headers */,
+				7780D16A2994E16300DB17FB /* Sources */,
+				7780D16B2994E16300DB17FB /* Frameworks */,
+				7780D16C2994E16300DB17FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkKit;
+			productName = NetworkKit;
+			productReference = 7780D16E2994E16300DB17FB /* NetworkKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7780D1762994E16300DB17FB /* NetworkKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7780D18B2994E16300DB17FB /* Build configuration list for PBXNativeTarget "NetworkKitTests" */;
+			buildPhases = (
+				7780D1732994E16300DB17FB /* Sources */,
+				7780D1742994E16300DB17FB /* Frameworks */,
+				7780D1752994E16300DB17FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7780D17A2994E16300DB17FB /* PBXTargetDependency */,
+				7780D17C2994E16300DB17FB /* PBXTargetDependency */,
+			);
+			name = NetworkKitTests;
+			productName = NetworkKitTests;
+			productReference = 7780D1772994E16300DB17FB /* NetworkKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		77B8E62929938F5400F81EB2 /* GitHubRepo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B8E65429938F5500F81EB2 /* Build configuration list for PBXNativeTarget "GitHubRepo" */;
@@ -134,10 +265,12 @@
 				77B8E62629938F5400F81EB2 /* Sources */,
 				77B8E62729938F5400F81EB2 /* Frameworks */,
 				77B8E62829938F5400F81EB2 /* Resources */,
+				7780D1852994E16300DB17FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7780D1822994E16300DB17FB /* PBXTargetDependency */,
 			);
 			name = GitHubRepo;
 			productName = GitHubRepo;
@@ -190,6 +323,13 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					7780D16D2994E16300DB17FB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					7780D1762994E16300DB17FB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 77B8E62929938F5400F81EB2;
+					};
 					77B8E62929938F5400F81EB2 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -219,11 +359,27 @@
 				77B8E62929938F5400F81EB2 /* GitHubRepo */,
 				77B8E63F29938F5500F81EB2 /* GitHubRepoTests */,
 				77B8E64929938F5500F81EB2 /* GitHubRepoUITests */,
+				7780D16D2994E16300DB17FB /* NetworkKit */,
+				7780D1762994E16300DB17FB /* NetworkKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7780D16C2994E16300DB17FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7780D1752994E16300DB17FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B8E62829938F5400F81EB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +407,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7780D16A2994E16300DB17FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7780D1722994E16300DB17FB /* NetworkKit.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7780D1732994E16300DB17FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7780D17F2994E16300DB17FB /* NetworkKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B8E62629938F5400F81EB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +452,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7780D17A2994E16300DB17FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7780D16D2994E16300DB17FB /* NetworkKit */;
+			targetProxy = 7780D1792994E16300DB17FB /* PBXContainerItemProxy */;
+		};
+		7780D17C2994E16300DB17FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77B8E62929938F5400F81EB2 /* GitHubRepo */;
+			targetProxy = 7780D17B2994E16300DB17FB /* PBXContainerItemProxy */;
+		};
+		7780D1822994E16300DB17FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7780D16D2994E16300DB17FB /* NetworkKit */;
+			targetProxy = 7780D1812994E16300DB17FB /* PBXContainerItemProxy */;
+		};
 		77B8E64229938F5500F81EB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 77B8E62929938F5400F81EB2 /* GitHubRepo */;
@@ -312,6 +499,102 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7780D1862994E16300DB17FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VQ8QM83QSZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7780D1872994E16300DB17FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VQ8QM83QSZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7780D1882994E16300DB17FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ8QM83QSZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubRepo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubRepo";
+			};
+			name = Debug;
+		};
+		7780D1892994E16300DB17FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ8QM83QSZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubRepo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubRepo";
+			};
+			name = Release;
+		};
 		77B8E65229938F5500F81EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,6 +852,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7780D18A2994E16300DB17FB /* Build configuration list for PBXNativeTarget "NetworkKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7780D1862994E16300DB17FB /* Debug */,
+				7780D1872994E16300DB17FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7780D18B2994E16300DB17FB /* Build configuration list for PBXNativeTarget "NetworkKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7780D1882994E16300DB17FB /* Debug */,
+				7780D1892994E16300DB17FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		77B8E62529938F5400F81EB2 /* Build configuration list for PBXProject "GitHubRepo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
