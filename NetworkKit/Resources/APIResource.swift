@@ -10,6 +10,7 @@ import Foundation
 public protocol APIResource {
     associatedtype ModelType: Decodable
     var methodPath: String { get }
+    func getAuthHeaders() -> [String: String]
 }
 
 extension APIResource {
@@ -22,10 +23,6 @@ extension APIResource {
 
     private func getBaseHeaders() -> [String: String] {
         ["Content-Type": "application/json"]
-    }
-
-    private func getAuthHeaders() -> [String: String] {
-        ["Bearer":"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"]
     }
     
 }
