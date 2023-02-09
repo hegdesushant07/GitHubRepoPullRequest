@@ -38,9 +38,8 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()
-        setupViewModel()
+        fetchPullRequestData()
     }
-
     
     private func setupUI() {
         view.addSubview(pullRequestTableView)
@@ -53,11 +52,6 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
             pullRequestTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             pullRequestTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
         ])
-    }
-    
-    private func setupViewModel() {
-        
-        fetchPullRequestData()
     }
     
     private func fetchPullRequestData() {
@@ -75,7 +69,6 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
             self.pullRequestTableView.dataSource = self.dataSource
             self.pullRequestTableView.reloadData()
         }
-        
     }
 
 }

@@ -7,13 +7,17 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 final class PullRequestTableViewCell: UITableViewCell {
     
     private var userImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .blue
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -77,9 +81,10 @@ final class PullRequestTableViewCell: UITableViewCell {
     }
     
     func updateData(data: GitHubPullRequest) {
+        KF.url(URL(string: data.user.avatarURL)).set(to: userImageView)
         titleLabel.text = data.title
         if let closedAt = data.closedAt {
-            descriptLabel.text = "#\(data.number) by \(data.user.login) was closed by \(closedAt) "
+            descriptLabel.text = "#\(data.number) by \(data.user.login) was closed \(closedAt) "
         }
     }
     
