@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-class PullRequestTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableViewDataSource {
+final class PullRequestTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableViewDataSource {
     
     private var cellIdentifier : String
     private var items : [T]
-    var configureCell : (CELL, T) -> () = {_,_ in }
-    
+    private var configureCell : (CELL, T) -> () = {_,_ in }
     
     init(cellIdentifier : String, items : [T], configureCell : @escaping (CELL, T) -> ()) {
         self.cellIdentifier = cellIdentifier
@@ -25,9 +24,7 @@ class PullRequestTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITab
         items.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CELL
         let item = self.items[indexPath.row]
         self.configureCell(cell, item)

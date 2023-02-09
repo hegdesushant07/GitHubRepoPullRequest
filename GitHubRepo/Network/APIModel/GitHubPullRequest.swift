@@ -26,9 +26,9 @@ struct GitHubPullRequest: Codable {
     let locked: Bool
     let title: String
     let user: User
-    let body: String
+    let body: String?
     let createdAt, updatedAt: String?
-    let closedAt, mergedAt: JSONNull?
+    let closedAt, mergedAt: String?
     let mergeCommitSHA: String
     let assignee: JSONNull?
     let assignees: [JSONAny]
@@ -375,6 +375,7 @@ enum ReviewCommentURL: String, Codable {
 
 enum State: String, Codable {
     case stateOpen = "open"
+    case stateClosed = "closed"
 }
 
 typealias GitHub = [GitHubPullRequest]

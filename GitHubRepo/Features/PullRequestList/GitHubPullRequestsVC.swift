@@ -14,7 +14,7 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         tableView.isHidden = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(PullRequestTableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.backgroundColor = .red
+        tableView.backgroundColor = .white
         return tableView
     }()
         
@@ -36,6 +36,7 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
     
     private func setupUI() {
         view.addSubview(pullRequestTableView)
+        
         pullRequestTableView.delegate = self
         
         NSLayoutConstraint.activate([
@@ -54,7 +55,7 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         })
     }
     
-    func updateDataSource() {
+    private func updateDataSource() {
         dataSource = PullRequestTableViewDataSource(cellIdentifier: "cell", items: gitPullRequestViewModel?.pullrequests ?? [], configureCell: { cell, pullRequestData in
             cell.updateData(data: pullRequestData)
         })

@@ -8,15 +8,19 @@
 import Foundation
 import NetworkKit
 
-class GitPullRequestViewModel {
+final class GitPullRequestViewModel {
     
     private(set) var pullrequests: [GitHubPullRequest] = []
-    
+    var currentPage : Int = 1
+    var isLoading : Bool = false
 
     func fetchPullRequestList(onCompletion: @escaping ([GitHubPullRequest]) -> ()) {
 
-        let resource = GitAPIResource()
+        var resource = GitAPIResource()
         let request = APIRequest(resource: resource)
+        
+        //"https://api.github.com/repos/apple/swift/pulls?state=closed&page=1&per_page=10"
+        resource.methodPath += "?state=closed&page=\(currentPage)&per_page=10"
         
         request.execute { [weak self] requests in
             guard let self = self else { return }
