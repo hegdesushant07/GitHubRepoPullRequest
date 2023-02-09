@@ -6,14 +6,18 @@
 //
 
 import Foundation
-import NetworkKit
 
 final class GitPullRequestViewModel {
     
+    private var serviceManager: ServiceManagerProtocol
     private(set) var pullrequests: [GitHubPullRequest] = []
-    var currentPage : Int = 1
-    var isLoading : Bool = false
-
+    private var isLoading : Bool = false
+    private var currentPage : Int = 1
+    
+    init(serviceManager: ServiceManagerProtocol) {
+        self.serviceManager = serviceManager
+    }
+    
     func fetchPullRequestList(onCompletion: @escaping ([GitHubPullRequest]) -> ()) {
 
         if !self.isLoading {
@@ -21,14 +25,8 @@ final class GitPullRequestViewModel {
             
             print("Current PAge: \(currentPage)")
             
-            var resource = GitAPIResource()
-            resource.methodPath += "page=\(currentPage)&per_page=10"
-            
-            let request = APIRequest(resource: resource)
-
-            request.execute { [weak self] requests in
-                guard let self = self else { return }
-                self.pullrequests.append(contentsOf: requests ?? [])
+            serviceManager.fetchPullRequestList(for: currentPage) { pullrequests in
+                self.pullrequests.append(contentsOf: pullrequests)
                 if self.pullrequests.count > 0 {
                     self.currentPage += 1
                 }

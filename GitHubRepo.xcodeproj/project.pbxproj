@@ -26,6 +26,7 @@
 		7780D1A5299507C000DB17FB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A4299507C000DB17FB /* NavigationController.swift */; };
 		7780D1A729950AE800DB17FB /* PullRequestTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A629950AE800DB17FB /* PullRequestTableViewDataSource.swift */; };
 		7780D1A929950CEB00DB17FB /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A829950CEB00DB17FB /* PullRequestTableViewCell.swift */; };
+		7780D1AB29954D1200DB17FB /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1AA29954D1200DB17FB /* ServiceManager.swift */; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63229938F5400F81EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E63129938F5400F81EB2 /* ViewController.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		7780D1A4299507C000DB17FB /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7780D1A629950AE800DB17FB /* PullRequestTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewDataSource.swift; sourceTree = "<group>"; };
 		7780D1A829950CEB00DB17FB /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		7780D1AA29954D1200DB17FB /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		77B8E62A29938F5400F81EB2 /* GitHubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8E62D29938F5400F81EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B8E63129938F5400F81EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				7780D19F2995061700DB17FB /* Views */,
 				7780D19C2994FD7E00DB17FB /* ViewModel */,
 				7780D1A02995066300DB17FB /* GitHubPullRequestsVC.swift */,
+				7780D1AA29954D1200DB17FB /* ServiceManager.swift */,
 			);
 			path = PullRequestList;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				7780D1A929950CEB00DB17FB /* PullRequestTableViewCell.swift in Sources */,
 				7780D1A5299507C000DB17FB /* NavigationController.swift in Sources */,
 				7780D1992994F73600DB17FB /* GitHubPullRequestService.swift in Sources */,
+				7780D1AB29954D1200DB17FB /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
