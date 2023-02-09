@@ -76,6 +76,7 @@ struct GitHubPullRequest: Codable {
 }
 
 enum AuthorAssociation: String, Codable {
+    case collaborator = "COLLABORATOR"
     case contributor = "CONTRIBUTOR"
     case member = "MEMBER"
     case none = "NONE"
@@ -385,9 +386,9 @@ class JSONNull: Codable, Hashable {
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-
-    public var hashValue: Int {
-        return 0
+    
+    func hash(into hasher: inout Hasher) {
+        //
     }
 
     public init() {}
