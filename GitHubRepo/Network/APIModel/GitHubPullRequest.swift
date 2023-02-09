@@ -38,11 +38,11 @@ struct GitHubPullRequest: Codable {
     let milestone: JSONNull?
     let draft: Bool
     let commitsURL, reviewCommentsURL: String
-    let reviewCommentURL: ReviewCommentURL
+    let reviewCommentURL: ReviewCommentURL?
     let commentsURL, statusesURL: String
-    let head, base: Base
-    let links: Links
-    let authorAssociation: AuthorAssociation
+    let head, base: Base?
+    let links: Links?
+    let authorAssociation: AuthorAssociation?
     let autoMerge, activeLockReason: JSONNull?
 
     enum CodingKeys: String, CodingKey {
