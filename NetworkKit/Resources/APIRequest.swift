@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class APIRequest<Resource: APIResource> {
+public final class APIRequest<Resource: APIResource> {
     public let resource: Resource
     
     public init(resource: Resource) {

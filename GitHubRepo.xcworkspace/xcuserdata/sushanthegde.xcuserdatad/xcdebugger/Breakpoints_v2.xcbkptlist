@@ -7,17 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7111FC9D-CD77-457B-9C88-E7503DBD9346"
-            shouldBeEnabled = "Yes"
+            uuid = "335D4731-FB27-4406-95C4-248DAF18124B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitHubRepo/Features/PullRequestList/ViewModel/GitPullRequestViewModel.swift"
+            filePath = "GitHubRepo/Features/PullRequestList/GitHubPullRequestsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetch()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "setupUI()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "118976E1-F45B-46EA-9EEF-64C3AB4ABD0A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkKit/Resources/NetworkRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "load(_:withCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "118976E1-F45B-46EA-9EEF-64C3AB4ABD0A - eb53729c41931b08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkKit.NetworkRequest.load(_: NetworkKit.APIResource, withCompletion: (Swift.Optional&lt;&#x3c4;_0_0.ModelType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NetworkKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sushanthegde/Desktop/Sushant/Projects/Company/Navi/GitHubRepo/NetworkKit/Resources/NetworkRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "118976E1-F45B-46EA-9EEF-64C3AB4ABD0A - b1e9fdc349913a2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in NetworkKit.NetworkRequest.load(_: NetworkKit.APIResource, withCompletion: (Swift.Optional&lt;&#x3c4;_0_0.ModelType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NetworkKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sushanthegde/Desktop/Sushant/Projects/Company/Navi/GitHubRepo/NetworkKit/Resources/NetworkRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "664">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

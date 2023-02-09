@@ -9,7 +9,7 @@ import Foundation
 
 public protocol APIResource {
     associatedtype ModelType: Decodable
-    var methodPath: String { get }
+    var methodPath: String { get set }
     func getAuthHeaders() -> [String: String]
 }
 
