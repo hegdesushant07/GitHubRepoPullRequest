@@ -14,10 +14,10 @@ struct GitAPIResource: APIResource {
     typealias ModelType = GitHubPullRequest
     
     var methodPath: String {
-        return "https://api.github.com/repos/hegdesushant07/GitHubRepoPullRequest/pulls"
+        "https://api.github.com/repos/apple/swift/pulls?page=1&per_page=10"
     }
     
     func getAuthHeaders() -> [String : String] {
-        ["Bearer":"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"]
+        [:]
     }
 }
