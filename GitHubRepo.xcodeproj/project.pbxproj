@@ -16,6 +16,7 @@
 		7780D1802994E16300DB17FB /* NetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7780D1702994E16300DB17FB /* NetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7780D1832994E16300DB17FB /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
 		7780D1842994E16300DB17FB /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7780D18E2994E6BC00DB17FB /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D18D2994E6BC00DB17FB /* APIResource.swift */; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63229938F5400F81EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E63129938F5400F81EB2 /* ViewController.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
@@ -93,6 +94,7 @@
 		7780D1712994E16300DB17FB /* NetworkKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkKit.docc; sourceTree = "<group>"; };
 		7780D1772994E16300DB17FB /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780D17E2994E16300DB17FB /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
+		7780D18D2994E6BC00DB17FB /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		77B8E62A29938F5400F81EB2 /* GitHubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8E62D29938F5400F81EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B8E63129938F5400F81EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,13 +177,13 @@
 				71E6B28DF3666EC0EE134526 /* Pods-NetworkKit-NetworkKitTests.debug.xcconfig */,
 				B935ECEE77D6568D95D9280B /* Pods-NetworkKit-NetworkKitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		7780D16F2994E16300DB17FB /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				7780D18C2994E69D00DB17FB /* Resources */,
 				7780D1702994E16300DB17FB /* NetworkKit.h */,
 				7780D1712994E16300DB17FB /* NetworkKit.docc */,
 			);
@@ -194,6 +196,14 @@
 				7780D17E2994E16300DB17FB /* NetworkKitTests.swift */,
 			);
 			path = NetworkKitTests;
+			sourceTree = "<group>";
+		};
+		7780D18C2994E69D00DB17FB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7780D18D2994E6BC00DB17FB /* APIResource.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		77B8E62129938F5400F81EB2 = {
@@ -622,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7780D18E2994E6BC00DB17FB /* APIResource.swift in Sources */,
 				7780D1722994E16300DB17FB /* NetworkKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +735,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,9 +745,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -755,6 +770,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,9 +780,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.network.in.NetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -928,6 +947,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7837A460951AF2565736AAAB /* Pods-GitHubRepo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -961,6 +981,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0401CE2477F9D63152D1754E /* Pods-GitHubRepo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
