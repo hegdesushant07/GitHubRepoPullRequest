@@ -12,6 +12,7 @@ import Foundation
 //
 //   let gitHub = try? JSONDecoder().decode(GitHub.self, from: jsonData)
 
+// MARK: - GitHubPullRequest
 struct GitHubPullRequest: Codable {
     let url: String
     let id: Int
@@ -21,26 +22,28 @@ struct GitHubPullRequest: Codable {
     let patchURL: String
     let issueURL: String
     let number: Int
-    let state: String
+    let state: State
     let locked: Bool
     let title: String
-    let user: Assignee
-    let body: JSONNull
-    let createdAt, updatedAt: String
-    let closedAt, mergedAt: JSONNull
+    let user: User
+    let body: String
+    let createdAt, updatedAt: String?
+    let closedAt, mergedAt: JSONNull?
     let mergeCommitSHA: String
-    let assignee: Assignee
-    let assignees: [Assignee]
-    let requestedReviewers, requestedTeams, labels: [JSONAny]
-    let milestone: JSONNull
+    let assignee: JSONNull?
+    let assignees: [JSONAny]
+    let requestedReviewers: [User]
+    let requestedTeams: [RequestedTeam]
+    let labels: [Label]
+    let milestone: JSONNull?
     let draft: Bool
     let commitsURL, reviewCommentsURL: String
-    let reviewCommentURL: String
+    let reviewCommentURL: ReviewCommentURL
     let commentsURL, statusesURL: String
     let head, base: Base
     let links: Links
-    let authorAssociation: String
-    let autoMerge, activeLockReason: JSONNull
+    let authorAssociation: AuthorAssociation
+    let autoMerge, activeLockReason: JSONNull?
 
     enum CodingKeys: String, CodingKey {
         case url, id
@@ -72,57 +75,30 @@ struct GitHubPullRequest: Codable {
     }
 }
 
-// MARK: - Assignee
-struct Assignee: Codable {
-    let login: String
-    let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url, htmlURL, followersURL: String
-    let followingURL, gistsURL, starredURL: String
-    let subscriptionsURL, organizationsURL, reposURL: String
-    let eventsURL: String
-    let receivedEventsURL: String
-    let type: String
-    let siteAdmin: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
+enum AuthorAssociation: String, Codable {
+    case collaborator = "COLLABORATOR"
+    case contributor = "CONTRIBUTOR"
+    case member = "MEMBER"
+    case none = "NONE"
 }
 
 // MARK: - Base
 struct Base: Codable {
     let label, ref, sha: String
-    let user: Assignee
+    let user: User
     let repo: Repo
 }
 
 // MARK: - Repo
 struct Repo: Codable {
     let id: Int
-    let nodeID, name, fullName: String
+    let nodeID: String
+    let name: RepoName
+    let fullName: String
     let repoPrivate: Bool
-    let owner: Assignee
+    let owner: User
     let htmlURL: String
-    let description: String
+    let description: Description
     let fork: Bool
     let url, forksURL: String
     let keysURL, collaboratorsURL: String
@@ -143,25 +119,24 @@ struct Repo: Codable {
     let issuesURL, pullsURL, milestonesURL, notificationsURL: String
     let labelsURL, releasesURL: String
     let deploymentsURL: String
-    let createdAt, updatedAt, pushedAt: String
+    let createdAt, updatedAt, pushedAt: String?
     let gitURL, sshURL: String
     let cloneURL: String
-    let svnURL: String
-    let homepage: JSONNull
+    let svnURL, homepage: String
     let size, stargazersCount, watchersCount: Int
-    let language: String
+    let language: Language
     let hasIssues, hasProjects, hasDownloads, hasWiki: Bool
     let hasPages, hasDiscussions: Bool
     let forksCount: Int
-    let mirrorURL: JSONNull
+    let mirrorURL: JSONNull?
     let archived, disabled: Bool
     let openIssuesCount: Int
-    let license: JSONNull
+    let license: License?
     let allowForking, isTemplate, webCommitSignoffRequired: Bool
     let topics: [JSONAny]
-    let visibility: String
+    let visibility: Visibility
     let forks, openIssues, watchers: Int
-    let defaultBranch: String
+    let defaultBranch: DefaultBranch
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -240,6 +215,119 @@ struct Repo: Codable {
     }
 }
 
+enum DefaultBranch: String, Codable {
+    case empty = "empty"
+    case main = "main"
+    case master = "master"
+}
+
+enum Description: String, Codable {
+    case theSwiftProgrammingLanguage = "The Swift Programming Language"
+}
+
+enum Language: String, Codable {
+    case c = "C++"
+}
+
+// MARK: - License
+struct License: Codable {
+    let key: Key
+    let name: LicenseName
+    let spdxID: SpdxID
+    let url: String
+    let nodeID: NodeID
+
+    enum CodingKeys: String, CodingKey {
+        case key, name
+        case spdxID = "spdx_id"
+        case url
+        case nodeID = "node_id"
+    }
+}
+
+enum Key: String, Codable {
+    case apache20 = "apache-2.0"
+}
+
+enum LicenseName: String, Codable {
+    case apacheLicense20 = "Apache License 2.0"
+}
+
+enum NodeID: String, Codable {
+    case mDc6TGljZW5ZZTI = "MDc6TGljZW5zZTI="
+}
+
+enum SpdxID: String, Codable {
+    case apache20 = "Apache-2.0"
+}
+
+enum RepoName: String, Codable {
+    case swift = "swift"
+}
+
+// MARK: - User
+struct User: Codable {
+    let login: String
+    let id: Int
+    let nodeID: String
+    let avatarURL: String
+    let gravatarID: String
+    let url, htmlURL, followersURL: String
+    let followingURL, gistsURL, starredURL: String
+    let subscriptionsURL, organizationsURL, reposURL: String
+    let eventsURL: String
+    let receivedEventsURL: String
+    let type: TypeEnum
+    let siteAdmin: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+
+enum TypeEnum: String, Codable {
+    case organization = "Organization"
+    case user = "User"
+}
+
+enum Visibility: String, Codable {
+    case visibilityPublic = "public"
+}
+
+// MARK: - Label
+struct Label: Codable {
+    let id: Int
+    let nodeID: String
+    let url: String
+    let name, color: String
+    let labelDefault: Bool
+    let description: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case nodeID = "node_id"
+        case url, name, color
+        case labelDefault = "default"
+        case description
+    }
+}
+
 // MARK: - Links
 struct Links: Codable {
     let linksSelf, html, issue, comments: Comments
@@ -259,6 +347,36 @@ struct Comments: Codable {
     let href: String
 }
 
+// MARK: - RequestedTeam
+struct RequestedTeam: Codable {
+    let name: String
+    let id: Int
+    let nodeID, slug, description, privacy: String
+    let url, htmlURL: String
+    let membersURL: String
+    let repositoriesURL: String
+    let permission: String
+    let parent: JSONNull?
+
+    enum CodingKeys: String, CodingKey {
+        case name, id
+        case nodeID = "node_id"
+        case slug, description, privacy, url
+        case htmlURL = "html_url"
+        case membersURL = "members_url"
+        case repositoriesURL = "repositories_url"
+        case permission, parent
+    }
+}
+
+enum ReviewCommentURL: String, Codable {
+    case httpsAPIGithubCOMReposAppleSwiftPullsCommentsNumber = "https://api.github.com/repos/apple/swift/pulls/comments{/number}"
+}
+
+enum State: String, Codable {
+    case stateOpen = "open"
+}
+
 typealias GitHub = [GitHubPullRequest]
 
 // MARK: - Encode/decode helpers
@@ -270,7 +388,7 @@ class JSONNull: Codable, Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        
+        //
     }
 
     public init() {}
