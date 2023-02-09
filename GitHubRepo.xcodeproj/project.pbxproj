@@ -26,6 +26,10 @@
 		7780D1A5299507C000DB17FB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A4299507C000DB17FB /* NavigationController.swift */; };
 		7780D1A729950AE800DB17FB /* PullRequestTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A629950AE800DB17FB /* PullRequestTableViewDataSource.swift */; };
 		7780D1A929950CEB00DB17FB /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1A829950CEB00DB17FB /* PullRequestTableViewCell.swift */; };
+		7780D1AB29954D1200DB17FB /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1AA29954D1200DB17FB /* ServiceManager.swift */; };
+		7780D1AE29954F1000DB17FB /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1AD29954F1000DB17FB /* ServiceManagerMock.swift */; };
+		7780D1B32995501E00DB17FB /* GitHubPullRequestMockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7780D1B22995501E00DB17FB /* GitHubPullRequestMockResponse.json */; };
+		7780D1B6299552F000DB17FB /* GitHubPullRequestViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D1B5299552F000DB17FB /* GitHubPullRequestViewModelTests.swift */; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63229938F5400F81EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E63129938F5400F81EB2 /* ViewController.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
@@ -113,6 +117,10 @@
 		7780D1A4299507C000DB17FB /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7780D1A629950AE800DB17FB /* PullRequestTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewDataSource.swift; sourceTree = "<group>"; };
 		7780D1A829950CEB00DB17FB /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
+		7780D1AA29954D1200DB17FB /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		7780D1AD29954F1000DB17FB /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
+		7780D1B22995501E00DB17FB /* GitHubPullRequestMockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GitHubPullRequestMockResponse.json; sourceTree = "<group>"; };
+		7780D1B5299552F000DB17FB /* GitHubPullRequestViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPullRequestViewModelTests.swift; sourceTree = "<group>"; };
 		77B8E62A29938F5400F81EB2 /* GitHubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8E62D29938F5400F81EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B8E63129938F5400F81EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +273,7 @@
 				7780D19F2995061700DB17FB /* Views */,
 				7780D19C2994FD7E00DB17FB /* ViewModel */,
 				7780D1A02995066300DB17FB /* GitHubPullRequestsVC.swift */,
+				7780D1AA29954D1200DB17FB /* ServiceManager.swift */,
 			);
 			path = PullRequestList;
 			sourceTree = "<group>";
@@ -292,6 +301,30 @@
 				7780D1A4299507C000DB17FB /* NavigationController.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7780D1AC29954EDA00DB17FB /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7780D1B5299552F000DB17FB /* GitHubPullRequestViewModelTests.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		7780D1AF29954F7000DB17FB /* MockAPIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				7780D1B22995501E00DB17FB /* GitHubPullRequestMockResponse.json */,
+			);
+			path = MockAPIResponse;
+			sourceTree = "<group>";
+		};
+		7780D1B4299552D100DB17FB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7780D1AD29954F1000DB17FB /* ServiceManagerMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		77B8E62129938F5400F81EB2 = {
@@ -339,6 +372,9 @@
 		77B8E64329938F5500F81EB2 /* GitHubRepoTests */ = {
 			isa = PBXGroup;
 			children = (
+				7780D1B4299552D100DB17FB /* Mocks */,
+				7780D1AF29954F7000DB17FB /* MockAPIResponse */,
+				7780D1AC29954EDA00DB17FB /* UnitTests */,
 				77B8E64429938F5500F81EB2 /* GitHubRepoTests.swift */,
 			);
 			path = GitHubRepoTests;
@@ -559,6 +595,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7780D1B32995501E00DB17FB /* GitHubPullRequestMockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +788,7 @@
 				7780D1A929950CEB00DB17FB /* PullRequestTableViewCell.swift in Sources */,
 				7780D1A5299507C000DB17FB /* NavigationController.swift in Sources */,
 				7780D1992994F73600DB17FB /* GitHubPullRequestService.swift in Sources */,
+				7780D1AB29954D1200DB17FB /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +797,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B8E64529938F5500F81EB2 /* GitHubRepoTests.swift in Sources */,
+				7780D1AE29954F1000DB17FB /* ServiceManagerMock.swift in Sources */,
+				7780D1B6299552F000DB17FB /* GitHubPullRequestViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1121,7 +1161,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ8QM83QSZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.githubRepo.in.GitHubRepoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1142,7 +1182,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ8QM83QSZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.githubRepo.in.GitHubRepoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

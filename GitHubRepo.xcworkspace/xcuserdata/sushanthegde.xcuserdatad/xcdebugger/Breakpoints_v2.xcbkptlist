@@ -14,8 +14,8 @@
             filePath = "GitHubRepo/Features/PullRequestList/GitHubPullRequestsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
