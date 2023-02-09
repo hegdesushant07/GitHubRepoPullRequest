@@ -17,6 +17,7 @@
 		7780D1832994E16300DB17FB /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
 		7780D1842994E16300DB17FB /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7780D18E2994E6BC00DB17FB /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D18D2994E6BC00DB17FB /* APIResource.swift */; };
+		7780D1902994E7C900DB17FB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780D18F2994E7C900DB17FB /* NetworkRequest.swift */; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63229938F5400F81EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E63129938F5400F81EB2 /* ViewController.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		7780D1772994E16300DB17FB /* NetworkKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780D17E2994E16300DB17FB /* NetworkKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitTests.swift; sourceTree = "<group>"; };
 		7780D18D2994E6BC00DB17FB /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		7780D18F2994E7C900DB17FB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		77B8E62A29938F5400F81EB2 /* GitHubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8E62D29938F5400F81EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B8E63129938F5400F81EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				7780D18D2994E6BC00DB17FB /* APIResource.swift */,
+				7780D18F2994E7C900DB17FB /* NetworkRequest.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7780D18E2994E6BC00DB17FB /* APIResource.swift in Sources */,
+				7780D1902994E7C900DB17FB /* NetworkRequest.swift in Sources */,
 				7780D1722994E16300DB17FB /* NetworkKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
