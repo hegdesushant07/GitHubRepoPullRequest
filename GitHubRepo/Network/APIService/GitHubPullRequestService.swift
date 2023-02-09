@@ -12,7 +12,7 @@ import NetworkKit
 struct GitAPIResource: APIResource {
     typealias ModelType = GitHubPullRequest
     
-    var methodPath: String = "https://api.github.com/repos/apple/swift/pulls"
+    var methodPath: String = "https://api.github.com/repos/apple/swift/pulls?state=closed&"
     
 //    var methodPath: String {
 ////        "https://api.github.com/repos/apple/swift/pulls?page=1&per_page=10"

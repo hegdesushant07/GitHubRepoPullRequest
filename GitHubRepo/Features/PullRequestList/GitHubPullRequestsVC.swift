@@ -20,7 +20,6 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         
     private var gitPullRequestViewModel: GitPullRequestViewModel?
     private var dataSource : PullRequestTableViewDataSource<PullRequestTableViewCell,GitHubPullRequest>!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,11 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
     
     private func setupViewModel() {
         gitPullRequestViewModel = GitPullRequestViewModel()
+        fetchPullRequestData()
+    }
+    
+    private func fetchPullRequestData() {
         gitPullRequestViewModel?.fetchPullRequestList(onCompletion: { pullRequestData in
-            print(pullRequestData)
             self.updateDataSource()
         })
     }
@@ -67,4 +69,16 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         
     }
 
+}
+
+extension GitHubPullRequestsVC {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastItem = (gitPullRequestViewModel?.pullrequests.count ?? 0) - 1
+        if indexPath.row == lastItem {
+            print(lastItem)
+            fetchPullRequestData()
+        }
+    }
+    
 }

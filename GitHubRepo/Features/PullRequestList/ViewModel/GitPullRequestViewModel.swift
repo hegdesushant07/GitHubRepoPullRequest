@@ -16,16 +16,25 @@ final class GitPullRequestViewModel {
 
     func fetchPullRequestList(onCompletion: @escaping ([GitHubPullRequest]) -> ()) {
 
-        var resource = GitAPIResource()
-        let request = APIRequest(resource: resource)
-        
-        //"https://api.github.com/repos/apple/swift/pulls?state=closed&page=1&per_page=10"
-        resource.methodPath += "?state=closed&page=\(currentPage)&per_page=10"
-        
-        request.execute { [weak self] requests in
-            guard let self = self else { return }
-            self.pullrequests = requests ?? []
-            onCompletion(self.pullrequests)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            print("Current PAge: \(currentPage)")
+            
+            var resource = GitAPIResource()
+            resource.methodPath += "page=\(currentPage)&per_page=10"
+            
+            let request = APIRequest(resource: resource)
+
+            request.execute { [weak self] requests in
+                guard let self = self else { return }
+                self.pullrequests.append(contentsOf: requests ?? [])
+                if self.pullrequests.count > 0 {
+                    self.currentPage += 1
+                }
+                onCompletion(self.pullrequests)
+                self.isLoading = false
+            }
         }
         
     }

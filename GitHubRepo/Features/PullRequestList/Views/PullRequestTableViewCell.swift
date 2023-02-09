@@ -77,7 +77,6 @@ final class PullRequestTableViewCell: UITableViewCell {
     }
     
     func updateData(data: GitHubPullRequest) {
-        print(data.title)
         titleLabel.text = data.title
         if let closedAt = data.closedAt {
             descriptLabel.text = "#\(data.number) by \(data.user.login) was closed by \(closedAt) "
