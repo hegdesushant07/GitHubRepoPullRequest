@@ -40,5 +40,10 @@ extension NetworkRequest {
         }
     }
     
-    
+}
+
+extension APIRequest {
+    public func execute(withCompletion completion: @escaping ([Resource.ModelType]?) -> Void) {
+        load(resource, withCompletion: completion)
+    }
 }
