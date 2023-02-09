@@ -38,7 +38,7 @@
 		77B70C1329957D2700F9AFD5 /* CommonLibKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B70C1229957D2700F9AFD5 /* CommonLibKitTests.swift */; };
 		77B70C1429957D2700F9AFD5 /* CommonLibKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B70C0429957D2700F9AFD5 /* CommonLibKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77B70C2029957D7100F9AFD5 /* CommonLibKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B70C0229957D2700F9AFD5 /* CommonLibKit.framework */; };
-		77B70C2329957D7300F9AFD5 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
+		77B70C252995815200F9AFD5 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D16E2994E16300DB17FB /* NetworkKit.framework */; };
 		77B8E62E29938F5400F81EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8E62D29938F5400F81EB2 /* AppDelegate.swift */; };
 		77B8E63529938F5400F81EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63329938F5400F81EB2 /* Main.storyboard */; };
 		77B8E63729938F5500F81EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B8E63629938F5500F81EB2 /* Assets.xcassets */; };
@@ -206,7 +206,7 @@
 			files = (
 				FD637139B2A672BBE9A382AD /* Pods_GitHubRepo.framework in Frameworks */,
 				77B70C2029957D7100F9AFD5 /* CommonLibKit.framework in Frameworks */,
-				77B70C2329957D7300F9AFD5 /* NetworkKit.framework in Frameworks */,
+				77B70C252995815200F9AFD5 /* NetworkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1397,7 +1397,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHubRepo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1430,7 +1430,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHubRepo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

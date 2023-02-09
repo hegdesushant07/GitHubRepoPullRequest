@@ -19,7 +19,7 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
     }()
         
     private var gitPullRequestViewModel: GitPullRequestViewModel?
-    private var dataSource : PullRequestTableViewDataSource<PullRequestTableViewCell,GitHubPullRequest>!
+    private var dataSource : PullRequestTableViewDataSource<PullRequestTableViewCell,GitHubPullRequest>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,8 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         fetchPullRequestData()
     }
     
+    
+    /// Setup UI Elements for the View
     private func setupUI() {
         view.addSubview(pullRequestTableView)
         
@@ -54,12 +56,15 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
         ])
     }
     
+    /// Fetch Pull request Data using viewModel
     private func fetchPullRequestData() {
         gitPullRequestViewModel?.fetchPullRequestList(onCompletion: { pullRequestData in
             self.updateDataSource()
         })
     }
     
+    
+    /// Configure TableViewCell and Update the tableview data source
     private func updateDataSource() {
         dataSource = PullRequestTableViewDataSource(cellIdentifier: "cell", items: gitPullRequestViewModel?.pullrequests ?? [], configureCell: { cell, pullRequestData in
             cell.viewModel = PullRequestsCellViewModel(data: pullRequestData)
@@ -75,6 +80,8 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
 
 extension GitHubPullRequestsVC {
     
+    /// Use Tableview willDisplay funcion for pagination/
+    /// Fetching data when last item will display
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastItem = (gitPullRequestViewModel?.pullrequests.count ?? 0) - 1
         if indexPath.row == lastItem {

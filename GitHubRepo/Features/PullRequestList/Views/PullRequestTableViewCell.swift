@@ -85,6 +85,8 @@ final class PullRequestTableViewCell: UITableViewCell {
         
     }
     
+    
+    /// Bind Data to tableviewCell
     private func bindData() {
         guard let viewModel = viewModel else {
             return

@@ -19,7 +19,9 @@ final class PullRequestsCellViewModel {
         user = data.user
         closedDate = data.closedAt ?? ""
     }
+
     
+    /// Return converted Date, Example : 15 January 2023
     var closeDate: String {
         closedDate.toDate?.datelongMonthYear ?? ""
     }

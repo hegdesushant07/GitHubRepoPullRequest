@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: Generic Data Source for PullRequestTableViewCell
 final class PullRequestTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableViewDataSource {
     
     private var cellIdentifier : String
