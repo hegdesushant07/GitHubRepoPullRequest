@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7111FC9D-CD77-457B-9C88-E7503DBD9346"
-            shouldBeEnabled = "Yes"
+            uuid = "335D4731-FB27-4406-95C4-248DAF18124B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GitHubRepo/Features/PullRequestList/ViewModel/GitPullRequestViewModel.swift"
+            filePath = "GitHubRepo/Features/PullRequestList/GitHubPullRequestsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetch()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

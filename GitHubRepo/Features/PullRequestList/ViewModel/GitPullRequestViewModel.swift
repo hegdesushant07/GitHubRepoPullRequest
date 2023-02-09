@@ -12,7 +12,8 @@ class GitPullRequestViewModel {
     
     private(set) var pullrequests: [GitHubPullRequest] = []
     
-    func fetchPullRequestList() {
+
+    func fetchPullRequestList(onCompletion: @escaping ([GitHubPullRequest]) -> ()) {
 
         let resource = GitAPIResource()
         let request = APIRequest(resource: resource)
@@ -20,11 +21,9 @@ class GitPullRequestViewModel {
         request.execute { [weak self] requests in
             guard let self = self else { return }
             self.pullrequests = requests ?? []
-            print(self.pullrequests)
+            onCompletion(self.pullrequests)
         }
         
     }
-    
-    
-    
+        
 }
