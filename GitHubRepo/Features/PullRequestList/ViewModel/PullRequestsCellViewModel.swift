@@ -11,13 +11,17 @@ final class PullRequestsCellViewModel {
     private(set) var title: String
     private(set) var number: Int
     private(set) var user: User
-    private(set) var closedDate: String
+    private var closedDate: String
     
     init(data: GitHubPullRequest) {
         title = data.title
         number = data.number
         user = data.user
         closedDate = data.closedAt ?? ""
+    }
+    
+    var closeDate: String {
+        closedDate.toDate?.datelongMonthYear ?? ""
     }
     
 }

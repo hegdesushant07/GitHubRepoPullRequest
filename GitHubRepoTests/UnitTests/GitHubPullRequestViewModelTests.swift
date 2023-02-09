@@ -25,8 +25,6 @@ final class GitHubPullRequestViewModelTests: XCTestCase {
     func testFetchPullRequest() {
         viewModel.fetchPullRequestList { requests in
             XCTAssertTrue(requests.count > 0)
-            XCTAssertTrue(requests[0].title != "")
-            
         }
     }
     

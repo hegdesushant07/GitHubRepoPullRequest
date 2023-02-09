@@ -63,7 +63,6 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
     private func updateDataSource() {
         dataSource = PullRequestTableViewDataSource(cellIdentifier: "cell", items: gitPullRequestViewModel?.pullrequests ?? [], configureCell: { cell, pullRequestData in
             cell.viewModel = PullRequestsCellViewModel(data: pullRequestData)
-            //cell.updateData(data: pullRequestData)
         })
         
         DispatchQueue.main.async {

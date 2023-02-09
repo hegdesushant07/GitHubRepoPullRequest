@@ -92,7 +92,7 @@ final class PullRequestTableViewCell: UITableViewCell {
         
         KF.url(URL(string: viewModel.user.avatarURL)).set(to: userImageView)
         titleLabel.text = viewModel.title
-        descriptLabel.text = "#\(viewModel.number) by \(viewModel.user.login) was closed on \(viewModel.closedDate)"
+        descriptLabel.text = "#\(viewModel.number) by \(viewModel.user.login) was closed on \(viewModel.closeDate)"
         
     }
     

@@ -62,6 +62,17 @@
                ReferencedContainer = "container:GitHubRepo.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77B70C0A29957D2700F9AFD5"
+               BuildableName = "CommonLibKitTests.xctest"
+               BlueprintName = "CommonLibKitTests"
+               ReferencedContainer = "container:GitHubRepo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
