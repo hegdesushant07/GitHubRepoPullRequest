@@ -36,13 +36,18 @@ final class PullRequestTableViewCell: UITableViewCell {
         return label
     }()
     
+    var viewModel: PullRequestsCellViewModel? {
+        didSet {
+            bindData()
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .value1, reuseIdentifier: reuseIdentifier)
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        setupViewElements()
+        setupUI()
     }
     
     override func layoutSubviews() {
@@ -53,7 +58,7 @@ final class PullRequestTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViewElements() {
+    private func setupUI() {
         contentView.addSubview(userImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(descriptLabel)
@@ -80,12 +85,15 @@ final class PullRequestTableViewCell: UITableViewCell {
         
     }
     
-    func updateData(data: GitHubPullRequest) {
-        KF.url(URL(string: data.user.avatarURL)).set(to: userImageView)
-        titleLabel.text = data.title
-        if let closedAt = data.closedAt {
-            descriptLabel.text = "#\(data.number) by \(data.user.login) was closed \(closedAt) "
+    private func bindData() {
+        guard let viewModel = viewModel else {
+            return
         }
+        
+        KF.url(URL(string: viewModel.user.avatarURL)).set(to: userImageView)
+        titleLabel.text = viewModel.title
+        descriptLabel.text = "#\(viewModel.number) by \(viewModel.user.login) was closed on \(viewModel.closedDate)"
+        
     }
     
 }
