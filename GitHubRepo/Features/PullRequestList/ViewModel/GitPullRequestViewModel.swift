@@ -18,6 +18,8 @@ final class GitPullRequestViewModel {
         self.serviceManager = serviceManager
     }
     
+    /// fetchPullRequestList: Fetch pull requests data list
+    /// - Parameter onCompletion: onCompletion returns the data model
     func fetchPullRequestList(onCompletion: @escaping ([GitHubPullRequest]) -> ()) {
 
         if !self.isLoading {

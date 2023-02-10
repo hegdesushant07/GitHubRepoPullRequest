@@ -6,6 +6,8 @@ target 'GitHubRepo' do
   use_frameworks!
 
   # Pods for GitHubRepo
+  
+  pod 'Kingfisher'
 
   target 'GitHubRepoTests' do
     inherit! :search_paths

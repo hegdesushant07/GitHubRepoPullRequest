@@ -14,11 +14,6 @@ struct GitAPIResource: APIResource {
     
     var methodPath: String = "https://api.github.com/repos/apple/swift/pulls?state=closed&"
     
-//    var methodPath: String {
-////        "https://api.github.com/repos/apple/swift/pulls?page=1&per_page=10"
-////        "https://api.github.com/repos/apple/swift/pulls?state=closed&page=1&per_page=10"
-//    }
-    
     func getAuthHeaders() -> [String : String] {
         [:]
     }
