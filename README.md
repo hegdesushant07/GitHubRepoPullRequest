@@ -1,9 +1,6 @@
 # GitHubRepoPullRequest App
 
-Display list of closed Pull Request using API : 
-
-
-GitHubRepoPullRequest app is written in Swift 5 using Github API and demonstrating modular architecture, MVVM 
+GitHubRepoPullRequest app is written in Swift 5 using Github API and demonstrating modular architecture, MVVM to display list of closed Pull Request with pagination
 
 API Details: https://api.github.com/repos/apple/swift/pulls
 
