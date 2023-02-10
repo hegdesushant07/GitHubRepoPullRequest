@@ -6,7 +6,7 @@ API Details: https://api.github.com/repos/apple/swift/pulls
 
 Other Modules
 1. CommonKit - Includes common Extensions that can be reused
-2. NetworkKit - Represents seperate module for Networking that manages Network requests.
+2. NetworkKit - Represents seperate module for Networking that managing network requests.
 
 
 
