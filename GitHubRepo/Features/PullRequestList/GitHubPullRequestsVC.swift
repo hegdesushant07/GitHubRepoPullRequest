@@ -70,10 +70,8 @@ final class GitHubPullRequestsVC: UIViewController, UITableViewDelegate {
             cell.viewModel = PullRequestsCellViewModel(data: pullRequestData)
         })
         
-        DispatchQueue.main.async {
-            self.pullRequestTableView.dataSource = self.dataSource
-            self.pullRequestTableView.reloadData()
-        }
+        self.pullRequestTableView.dataSource = self.dataSource
+        self.pullRequestTableView.reloadData()
     }
 
 }
